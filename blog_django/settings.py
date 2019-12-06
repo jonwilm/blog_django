@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.blog',
     'import_export',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -100,6 +101,25 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# CkEditor Custom
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Source', 'Preview', 'Templates'],
+            ['Format', 'Maximize'],
+            ['Cut', 'Copy', 'PasteText'],
+            ['Undo', 'Redo'],
+            ['Find', 'Replace'],
+            ['Bold', 'Italic', 'Underline', 'Subscript', 'Superscript', 'Blockquote'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['Image', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak', 'Iframe']
+        ]
+    }
+}
 
 
 # Internationalization
