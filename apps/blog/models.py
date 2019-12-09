@@ -10,6 +10,7 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Categoría'
         verbose_name_plural = 'Categorías'
+        ordering = ['name']
 
     def __str__(self):
         return self.name
@@ -29,6 +30,7 @@ class Autor(models.Model):
     class Meta:
         verbose_name = 'Autor'
         verbose_name_plural = 'Autores'
+        ordering = ['last_name']
 
     def __str__(self):
         return "{0},{1}".format(self.last_name, self.first_name)
@@ -48,6 +50,7 @@ class Post(models.Model):
     class Meta:
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
+        ordering = ['date_create']
 
     def __str__(self):
         return self.title
