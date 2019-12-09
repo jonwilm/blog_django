@@ -15,7 +15,7 @@ def Generales(request):
 def Programacion(request):
     posts = Post.objects.filter(
         state = True,
-        category = Category.objects.get(name = 'Programacion')
+        category = Category.objects.get(name = 'Programación')
     )
     return render(request, 'programacion.html', {'posts': posts})
 
@@ -29,7 +29,7 @@ def Videojuegos(request):
 def Tecnologia(request):
     posts = Post.objects.filter(
         state = True,
-        category = Category.objects.get(name = 'Tecnologia')
+        category = Category.objects.get(name = 'Tecnología')
     )
     return render(request, 'tecnologia.html', {'posts': posts})
 
