@@ -39,3 +39,9 @@ def Tutoriales(request):
         category = Category.objects.get(name = 'Tutoriales')
     )
     return render(request, 'tutoriales.html', {'posts': posts})
+
+def DetailPost(request, slug):
+    post = Post.objects.get(
+        slug = slug
+    )
+    return render(request, 'post.html', {'detail_post': post})
